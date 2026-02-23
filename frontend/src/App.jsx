@@ -46,7 +46,7 @@ const App = () => {
 {messages.length === 0 ? (
   <div className="h-[60vh] flex flex-col justify-center items-center text-center">
     <h1 className="text-4xl font-bold bg-gradient-to-r from-gray-700 to-gray-300 bg-clip-text text-transparent">
-      Welcome to AI Chat
+      Welcome to AI Chat DPT
     </h1>
     <p className="text-gray-400 mt-2">How can I help you today?</p>
   </div>
