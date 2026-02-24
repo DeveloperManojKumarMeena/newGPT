@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios'
 
 const App = () => {
   const [messages, setmessages] = useState([
@@ -35,6 +36,8 @@ const App = () => {
     setinput("");
   };
 
+
+
   return (
     <div className="w-full h-screen bg-neutral-900 text-white overflow-x-hidden">
       <div className="container mx-auto max-w-3xl pb-44">
@@ -45,7 +48,7 @@ const App = () => {
     {/* Welcome Screen Logic */}
 {messages.length === 0 ? (
   <div className="h-[60vh] flex flex-col justify-center items-center text-center">
-    <h1 className="text-4xl font-bold bg-gradient-to-r from-gray-700 to-gray-300 bg-clip-text text-transparent">
+    <h1 className="text-4xl font-bold bg-linear-to-r from-gray-700 to-gray-300 bg-clip-text text-transparent">
       Welcome to AI Chat DPT
     </h1>
     <p className="text-gray-400 mt-2">How can I help you today?</p>
