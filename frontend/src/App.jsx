@@ -11,7 +11,7 @@ const App = () => {
     setinput(e.target.value);
   };
 
-  const submitHandler = () => {
+  const submitHandler =async () => {
     console.log(input);
     if (input === '') {
       return
@@ -34,6 +34,17 @@ const App = () => {
 
     setmessages((e) => [...e, usemessage]);
     setinput("");
+    
+    const result = await axios.post('http://localhost:3000/ai',{ask:usemessage.message})
+    console.log(result.data.responce)
+    const modelmessage = {
+      message:result.data.responce,
+      role:"model",
+      time: timestamp
+    }
+    setmessages((e)=>[...e,modelmessage])
+
+    ;
   };
 
 
