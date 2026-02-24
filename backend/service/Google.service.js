@@ -2,7 +2,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // 2. API Key के साथ इनिशियलाइज़ करें
-const genAI = new GoogleGenerativeAI('AIzaSyCesnAwLr5IM4YE11KbrUdnOKYZ8Jg-vm8');
+const genAI = new GoogleGenerativeAI({key:process.env.GEMINI_API_KEY});
 
 async function main(prompt) {
     try {

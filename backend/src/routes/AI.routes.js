@@ -1,5 +1,5 @@
 const express = require('express');
-const main = require('../../service/Google.service');
+const Aifunction = require('../../service/Antropic.service')
 
 const route = express.Router()
 
@@ -8,7 +8,7 @@ route.post('/ai',async(req,res)=>{
 
     console.log(message)
 
-    const responce= await main(message.ask)
+    const responce= await Aifunction(message.ask)
     console.log(responce)
     
     res.status(200).json({
